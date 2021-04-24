@@ -32,6 +32,12 @@ class SettingsService {
 
     return settings;
   }
+
+  async findByUsername(username: string): Promise<Setting> {
+    const settings = await this.settingsRepository.findOne({ username });
+
+    return settings;
+  }
 }
 
 export { SettingsService };
