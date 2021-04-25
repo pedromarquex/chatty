@@ -10,8 +10,13 @@ class UsersService {
   }
 
   async create(email: string): Promise<User> {
-    const userExists = await this.usersRepository.findOne({ email });
+    // Verificar se usuario existe
 
+    const userExists = await this.usersRepository.findOne({
+      email,
+    });
+
+    // Se existir, retornar user
     if (userExists) {
       return userExists;
     }
@@ -22,6 +27,14 @@ class UsersService {
 
     await this.usersRepository.save(user);
 
+    // Se não existir, salvar no DB
+    return user;
+  }
+
+  async findByEmail(email: string): Promise<User> {
+    const user = await this.usersRepository.findOne({
+      email,
+    });
     return user;
   }
 }

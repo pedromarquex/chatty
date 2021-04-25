@@ -18,6 +18,10 @@ app.get('/pages/client', (_, response) => {
   return response.render('html/client.html');
 });
 
+app.get('/pages/admin', (_, response) => {
+  return response.render('html/admin.html');
+});
+
 const http = createServer(app);
 const io = new Server(http);
 
