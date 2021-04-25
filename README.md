@@ -64,4 +64,4 @@ navigate to [localhost:3333/pages/admin](localhost:3333/pages/admin) and [localh
     <img alt = "The app" src = "./.github/application.gif" width = "700px" />
 </h1>
 
-Tks to [@rennadn](github.com/rennand) for the amazing template.
+Tks to [@rennand](https://github.com/rennand) for the amazing template.
