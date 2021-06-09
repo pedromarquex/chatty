@@ -49,7 +49,7 @@ yarn dev
 
 # or
 
-cd plantmanager
+cd chatty
 npm install
 npm run typeorm migration:run
 npm run dev
